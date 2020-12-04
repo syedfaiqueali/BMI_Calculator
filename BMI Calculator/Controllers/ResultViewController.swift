@@ -14,15 +14,21 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var bmiLabel: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
     
+    //Varaibles
+    var bmiValue: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        bmiLabel.text = bmiValue
     }
     
     //MARK:- IBAction
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        
     }
+    
     
 
 }
