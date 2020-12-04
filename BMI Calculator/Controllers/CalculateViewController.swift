@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculateViewController: UIViewController {
 
     //MARK:- IBOutlets
     @IBOutlet weak var heightLabel: UILabel!
@@ -42,10 +42,7 @@ class ViewController: UIViewController {
         //print(bmi)
         
         //For segue
-        let secondVC = SecondViewController()
-        secondVC.bmiValue = String(format: "%.1f", bmi)
-        self.present(secondVC, animated: true, completion: nil)
-        
+        self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     
 }
